@@ -1,0 +1,272 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+#hero {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    text-align: center;
+}
+#hero {
+    position: relative;
+    background-image: url('fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+
+
+.profile-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad (0 = transparente, 1 = sólido) */
+    z-index: -1;
+}
+
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+#hero .cta {
+    padding: 10px 20px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+#hero .cta:hover {
+    background: #e64a19;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input, form textarea, form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+form input, form textarea {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+form button {
+    background: #ff5722;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+form button:hover {
+    background: #e64a19;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1e1e1e;
+}
+
+.whatsapp-contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.whatsapp-contact p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+.whatsapp-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#paquetes {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.paquete {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.paquete:hover {
+    transform: scale(1.05);
+}
+
+.paquete h3 {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.paquete ul {
+    list-style: none;
+    padding: 0;
+}
+
+.paquete ul li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
