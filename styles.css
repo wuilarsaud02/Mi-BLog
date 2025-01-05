@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 body {
     font-family: 'Arial', sans-serif;
@@ -11,6 +10,39 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
 }
+
+.contador-visitas {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contador-visitas span {
+    font-size: 22px;
+    color: #FFD700; /* Color dorado */
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;margin-top: auto;
+}
+
+/* Efecto al aumentar el contador */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 @media (max-width: 768px) {
     .hero-image {
@@ -20,49 +52,6 @@ body {
     #hero h1 {
         font-size: 24px; /* Reduce el tamaño del título si es necesario */
     }
-}
-
-#paquetes {
-    position: relative;
-    padding: 50px 20px;
-    color: white;
-    text-align: center;
-}
-
-#paquetes::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('fondo.jpg'); /* Ruta de la imagen que quieras usar */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5; /* Ajusta la opacidad según lo que necesites */
-    z-index: -1; /* Coloca el fondo detrás del contenido */
-}
-
-#paquetes h2, #paquetes h3 {
-    text-align: center;
-}
-
-.paquete {
-    margin: 20px 0;
-    text-align: center;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
 }
 
 
@@ -119,6 +108,27 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
+#paquetes {
+    background-image: url('fondo.jpg'); /* Mismo fondo que #hero */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Asegura que el texto sea legible */
+    padding: 50px 0; /* Espaciado para que no quede pegado */
+    text-align: center;
+    position: relative;
+}
+
+#paquetes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco el fondo para mejor contraste */
+    z-index: -1;
+}
 
 
 .profile-container {
