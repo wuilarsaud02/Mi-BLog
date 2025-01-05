@@ -3,6 +3,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    #paquetes {
+    position: relative;
+    padding: 50px 20px;
+    color: white;
+}
+
+#paquetes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta por la ubicación de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.6; /* Ajusta la opacidad entre 0 (transparente) y 1 (opaco) */
+    z-index: -1; /* Coloca la capa de fondo detrás del contenido */
+}
+
+#paquetes h2, #paquetes h3 {
+    text-align: center;
+}
+
+.paquete {
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
 }
 body {
     font-family: 'Arial', sans-serif;
